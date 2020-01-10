@@ -24,7 +24,7 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-(global-font-lock-mode 0)
+(global-font-lock-mode 1)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (custom-set-variables
@@ -80,6 +80,7 @@
   (define-key global-map (kbd "s-r") 'vr/replace))  ;; Cmd+r find and replace
 
 (use-package yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 (use-package haml-mode)
 (use-package markdown-mode)
 
