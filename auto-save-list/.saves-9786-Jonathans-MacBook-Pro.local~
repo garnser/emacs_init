@@ -1,0 +1,2 @@
+/Users/jpetersson2/git/ansible/roles/common_xtrabackup/templates/bareos-job-template.conf.j2
+/Users/jpetersson2/git/ansible/roles/common_xtrabackup/templates/#bareos-job-template.conf.j2#

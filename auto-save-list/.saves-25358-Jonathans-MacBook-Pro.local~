@@ -1,0 +1,4 @@
+/Users/jpetersson2/git/ansible-gdnsd/templates/etc/gdnsd/zones/forward_zone.j2
+/Users/jpetersson2/git/ansible-gdnsd/templates/etc/gdnsd/zones/#forward_zone.j2#
+/Users/jpetersson2/git/ansible-gdnsd/tasks/main.yml
+/Users/jpetersson2/git/ansible-gdnsd/tasks/#main.yml#

@@ -1,0 +1,6 @@
+/Users/jpetersson2/git/ansible/roles/common_iptables_start/templates/01_iptables_basic
+/Users/jpetersson2/git/ansible/roles/common_iptables_start/templates/#01_iptables_basic#
+/Users/jpetersson2/git/ansible/roles/common_checkmk/templates/10_check_mk.iptables
+/Users/jpetersson2/git/ansible/roles/common_checkmk/templates/#10_check_mk.iptables#
+/Users/jpetersson2/git/ansible/roles/common_checkmk/tasks/normal_cmk.yml
+/Users/jpetersson2/git/ansible/roles/common_checkmk/tasks/#normal_cmk.yml#
