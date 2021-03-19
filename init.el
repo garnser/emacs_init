@@ -33,13 +33,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (shell-pop git-gutter magit markdown-mode haml-mode yaml-mode visual-regexp use-package)))
+   '(jinja2-mode shell-pop git-gutter magit markdown-mode haml-mode yaml-mode visual-regexp use-package))
  '(shell-pop-shell-type
-   (quote
-    ("ansi-term" "*ansi-term*"
+   '("ansi-term" "*ansi-term*"
      (lambda nil
-       (ansi-term shell-pop-term-shell)))))
+       (ansi-term shell-pop-term-shell))))
  '(shell-pop-universal-key "s-="))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -81,6 +79,8 @@
 
 (use-package yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(use-package jinja2-mode)
+(add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
 (use-package haml-mode)
 (use-package markdown-mode)
 
@@ -104,3 +104,8 @@
 
 (global-display-line-numbers-mode)
 (show-paren-mode 1)
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
