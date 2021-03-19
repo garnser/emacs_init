@@ -33,7 +33,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(jinja2-mode shell-pop git-gutter magit markdown-mode haml-mode yaml-mode visual-regexp use-package))
+   '(ansible-vault jinja2-mode shell-pop git-gutter magit markdown-mode haml-mode yaml-mode visual-regexp use-package))
  '(shell-pop-shell-type
    '("ansi-term" "*ansi-term*"
      (lambda nil
@@ -83,6 +83,13 @@
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . jinja2-mode))
 (use-package haml-mode)
 (use-package markdown-mode)
+(use-package ansible-vault)
+(add-to-list 'auto-mode-alist '("\\.vault\\'" . yaml-mode))
+  (defun ansible-vault-mode-maybe ()
+    (when (ansible-vault--is-vault-file)
+      (ansible-vault-mode 1)))
+
+  (add-hook 'yaml-mode-hook 'ansible-vault-mode-maybe)
 
 (use-package magit
   :config
