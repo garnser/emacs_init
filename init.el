@@ -9,6 +9,10 @@
     ;; For important compatibility libraries like cl-lib
 (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 
+;; UNCOMMENT TO UPGRADE/INSTALL
+;;(when (not package-archive-contents)
+;;  (package-refresh-contents))
+
 (package-initialize)
 
 
@@ -33,7 +37,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(ansible-vault jinja2-mode shell-pop git-gutter magit markdown-mode haml-mode yaml-mode visual-regexp use-package))
+   '(async bind-key dash exec-path-from-shell git-commit jinja2-mode transient with-editor ansible-vault powershell shell-pop git-gutter magit markdown-mode haml-mode yaml-mode visual-regexp use-package))
  '(shell-pop-shell-type
    '("ansi-term" "*ansi-term*"
      (lambda nil
@@ -110,7 +114,9 @@
    '(shell-pop-universal-key "s-=")))
 
 (global-display-line-numbers-mode)
+(setq line-number-mode t)
 (show-paren-mode 1)
+
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
